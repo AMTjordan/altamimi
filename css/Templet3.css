@@ -1481,6 +1481,11 @@ html {
     margin-right: 10px;
     transition: var(--main-transition);
 }
+@media (max-width:767px) {
+    .events .counter .box {
+    margin-right: -1px;
+    }
+}
 
 .events .counter .box:hover {
     border-color: var(--main-color);
@@ -1494,6 +1499,11 @@ html {
 .events .calender {
     display: flex;
     position: relative;
+}
+.events .counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .events .counter .box .num {
@@ -1608,7 +1618,7 @@ html {
 }
 
 .events form input::placeholder {
-    position: absolute;
+    position: relative;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
@@ -1917,14 +1927,31 @@ html {
 .stats .container {
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+@media (max-width:767px) {
+    .stars .container {
+align-items: center;
+
+    }
+
+    .stats .boxs .box {
+    }
 }
 
-.stats p {}
+.stats p {
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    color: black;
+    font-size: 35px;
+    margin-bottom: 76px;
+}
 
 .stats .boxs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-
+gap: 40px;
 }
 
 .stats .boxs .box {
@@ -1932,9 +1959,7 @@ html {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    height: 185px;
-    width: 260px;
-    margin-left: 15px;
+    width: 100%;
     text-align: center;
     position: relative;
 }
@@ -2166,7 +2191,7 @@ html {
     margin-right: 10px;
 }
 
-.footer .box3 .line .info {}
+
 
 .footer .photo img {
     width: 70px;
