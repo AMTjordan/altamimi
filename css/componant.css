@@ -1,0 +1,184 @@
+.container {
+    margin-left:auto ;
+    margin-right:auto ;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+@media(min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media(min-width:992px){
+    .container{
+        width:970px;
+    }
+} @media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}  
+ul{
+    list-style: none;
+    display: flex;
+}
+
+ @media(min-width:768px){
+    .container2{
+        width: 750px;
+    }
+}
+@media(min-width:992px){
+    .container2{
+        width:970px;
+    }
+} @media(min-width:1200px){
+    .container2 {
+        width: 1170px;
+    }
+}  
+.for-grid {
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+
+}
+a {
+    text-decoration: none;
+}
+/* html componant */
+/* <div class="fill">
+<p class="fill1">ARTICLES </p>
+
+</div> */
+
+.fill {
+    /* display: block; */
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    width: fit-content;
+}
+ /* box-shadow:0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%) */
+
+ 
+
+
+.fill + div {
+    margin-top: 100px;
+}
+ /* .fill::before , 
+ .fill::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 0%;
+    height: 100%;
+        top: 50%;
+    transform: translatey(-50%);
+    z-index: -1;
+    transition: 1s;
+    transition-delay: .4s;
+    transition-timing-function: linear;
+  
+
+}
+.fill::after{
+left: 0;  
+}
+.fill::before {
+    right: 0;
+}
+.fill:hover::after {
+    width: 60%;
+}
+.fill:hover::before {
+    width: 60%;
+
+} */
+
+.fill1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    padding: 12px 25px;
+    border: 2px solid;
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    text-transform: uppercase;
+
+z-index: 10 ;
+}
+
+.fill1:hover {
+    border-color:transparent ;
+border-width:2px ;
+color: white;
+transition-delay:var(--main-transition) ;
+}
+
+ .fill1::before,
+.fill1::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    transform: translatey(-50%);
+    border-radius: 50%;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+    transition-timing-function: linear;
+
+}
+ .fill1::before{
+    right: -35px;
+}
+.fill1::after {
+    left: -35px;   
+}
+.fill1:hover::before {
+animation: right-move forwards linear var(--main-transition) ;
+z-index: -1;
+}
+@keyframes right-move {
+    50%{
+        right: 0;
+        width: 15px;
+        height: 15px;
+
+    }
+    100% {
+        width: 50%;
+        height: 100%;
+    right: 0px;
+    border-radius: 0;
+    }
+}
+.fill1:hover::after {
+    animation: left-move forwards linear var(--main-transition) ;
+z-index: -1;
+    }
+    @keyframes left-move {
+        50%{
+            left: 0;
+            width: 15px;
+            height: 15px;
+    
+        }
+      
+        100% {
+            width: 54%;
+    border-radius: 0;
+    height: 100%;
+left: 0px;        }
+    }
+    .dots1 {
+        bottom: 166px;
+        left: 0;
+    }
+     .dots2 {
+        top: 66px;
+        right: 0;
+    }
